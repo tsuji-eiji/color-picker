@@ -5,16 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>カラーピッカー</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-    <form action="">
-        <input id="file" type="file">
-        <input type="text" id="result">
-        <button id="start-button" type="button">PU</button>
-    </form>
-    <div class="preview-row">
-        <img id="preview" src="" alt="">
+    <div class="container py-3 min-vh-100">
+        <form class="border rounded-2">
+            <div class="input-group w-50 mx-auto my-4">
+                <input type="file" class="form-control" id="file" aria-describedby="inputGroupFileAddon04"
+                    aria-label="Upload">
+            </div>
+            <div class="input-group w-50 mx-auto my-4">
+                <input type="text" id="result" class="form-control">
+                <button id="start-button" type="button" class="btn btn-primary">Pick!!</button>
+            </div>
+        </form>
+        <div id="preview-area" class="preview-row text-center my-4">
+            <img id="preview" class="mw-100 my-4" src="" alt="">
+        </div>
     </div>
     <script>
         document.getElementById('file').addEventListener('change', (e) => {
